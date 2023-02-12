@@ -68,9 +68,11 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
       // WebGL scene globals.
       let gl = null;
       let renderer = null;
+      let skullNode = new Gltf2Node({url: 'media/gltf/skull2.gltf'});
+      skullNode.setScale([0.5, 0.5, 0.5]); // Imposta la scala a 0.5 su ogni asse
       let scene = new Scene();
-      scene.addNode(new Gltf2Node({url: 'media/gltf/space/space.gltf'}));
-      scene.addNode(new SkyboxNode({url: 'media/textures/milky-way-4k.png'}));
+      scene.addNode(skullNode);
+      scene.addNode(new SkyboxNode({url: 'media/textures/spooky-way-4k.png'}));
 
       // Checks to see if WebXR is available and, if so, queries a list of
       // XRDevices that are connected to the system.
