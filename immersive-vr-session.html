@@ -193,6 +193,11 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
             let viewport = glLayer.getViewport(view);
             gl.viewport(viewport.x, viewport.y,
                         viewport.width, viewport.height);
+            // WebGL EDIT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            let skullNode = new Gltf2Node({url: 'media/gltf/skull2.gltf'});
+            skullNode.setScale([1.5, 1.5, 1.5]); // Imposta la scala a 0.5 su ogni asse
+            scene.addNode(skullNode);
+            // WebGL EDIT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
             // Draw this view of the scene. What happens in this function really
             // isn't all that important. What is important is that it renders
             // into the XRWebGLLayer's framebuffer, using the viewport into that
